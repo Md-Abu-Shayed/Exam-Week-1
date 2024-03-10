@@ -5,7 +5,7 @@ class Media {
 }
 
 class Song extends Media {
-  final String artist;
+  String artist;
 
   Song(this.artist);
 
@@ -16,13 +16,9 @@ class Song extends Media {
 }
 
 void main() {
-  // Create a Media object
-  var media = Media();
+  Media mediaInstance = Media();
+  mediaInstance.play();
 
-  // Create a Song object
-  var song = Song("The Beatles");
-
-  // Call the play() method on each object
-  media.play();
-  song.play();
+  Song songInstance = Song("Shayed");
+  songInstance.play();
 }
